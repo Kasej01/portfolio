@@ -1,3 +1,13 @@
 .home-container{
-    background-color: grey;
+    background-color: black;
+}
+
+
+@keyframes fadeOnLoad{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 2;
+    }
 }

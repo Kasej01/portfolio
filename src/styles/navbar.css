@@ -1,0 +1,23 @@
+.navbar{
+    width: auto;
+    background-color: rgb(143, 143, 143, 0.3);
+    color: white;
+}
+
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    padding: 1.2vw;
+    margin: 0;
+    justify-content: space-around;
+}
+
+.nav-list-item a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list-item{
+    list-style: none;
+}
