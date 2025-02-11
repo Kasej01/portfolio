@@ -1,28 +1,26 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Hero from './components/Hero';
-import './styles/blur.css'
-
-// import About from "./pages/About";
-// import Projects from "./pages/Projects";
-// import Contact from "./pages/Contact";
+import './styles/blur.css';
 
 function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
     <>
-    <div className="fade-overlay"></div>
-    <div className="excluded-element"><Hero/></div>
-    <div className="content">
-      <Navbar/>
-    </div>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      {/* <Route path="/about" element={<About />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/contact" element={<Contact />} /> */}
-    </Routes>
+      {isHomePage && <div className="fade-overlay"></div>}
+
+      {isHomePage && <div className="excluded-element"><Hero/></div>}
+
+      <div className={`content ${isHomePage ? "blurred-content" : ""}`}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
     </>
   );
 }
