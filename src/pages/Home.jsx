@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/home.css'
-import Hero from '../components/Hero';
+import '../styles/pages/home.css'
 
 
 
@@ -9,8 +8,7 @@ function Home() {
 
     return (
         <div className = "home-container">
-            <Hero/>
-            test
+            Test
         </div>
     );
 }

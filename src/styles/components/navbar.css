@@ -1,0 +1,37 @@
+.navbar{
+    width: auto;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    padding: 1.2vw;
+    margin: 0;
+    justify-content: space-around;
+}
+
+.nav-list-item a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list-item{
+    list-style: none;
+}
+
+
+/*Animates the border bottom on the navbar items*/
+.nav-list-item:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px white;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+
+.nav-list-item:hover:after {
+    transform: scaleX(1);
+}
