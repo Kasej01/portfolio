@@ -1,15 +1,22 @@
-import React from 'react';
+import { useState } from 'react';
 import '../styles/components/navbar.css';
 
 
 
 function Navbar (){
+    const [menuOpen, setMenuOpen] = useState(false);
+
+
     return (
         <div className="navbar">
-            <ul className="nav-list">
-                <li className="nav-list-item"><a href="/">Home</a></li>
+            <h1 className="nav-name"><a href="/">Kase J.</a></h1>
+
+            <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                ☰
+            </div>
+            <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
+                <li className="nav-list-item"><a href="/">About</a></li>
                 <li className="nav-list-item"><a href="/projects">Projects</a></li>
-                <li className="nav-list-item"><a href="/about">About</a></li>
                 <li className="nav-list-item"><a href="/contact">Contact</a></li>
             </ul>
         </div>
