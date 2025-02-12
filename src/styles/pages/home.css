@@ -1,3 +1,113 @@
 .home-container{
     background-color: black;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr .25fr 0.25fr;
+}
+
+.socials{
+    position: relative;
+    top: 10vh;
+    display: grid;
+    transform: scale(1.25);
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+
+.socials-title{
+    color: white;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    border-left: solid 1px white;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+/************
+*   Icons   *
+************/
+
+.icons-container{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    display: grid;
+}
+
+#github-icon{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    color: #6925b8;
+}
+
+#linkedin-icon{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    color: #0A66C2;
+}
+
+.icon-a{
+    transform: scale(2);
+    margin: 1.5rem;
+}
+
+.icon-a:hover{
+    animation: socialscale 300ms ease-in-out forwards;
+}
+
+@keyframes socialscale{
+    0%{
+
+    }
+    100%{
+        transform: scale(2.5);
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .home-container{
+        grid-template-columns: 100%;
+    }
+
+    .socials{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        justify-content: center;
+        text-align: center;
+        transform: scale(1);
+    }
+
+    .socials-title{
+        writing-mode: horizontal-tb;
+        border-bottom: solid 1px white;
+        border-left: none;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: center;
+        margin: 0;
+    }
+    .icons-container{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
 }

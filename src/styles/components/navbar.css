@@ -2,6 +2,7 @@
     width: auto;
     background-color: rgba(0, 0, 0, 0);
     color: white;
+    max-width: 100%;
 }
 
 
@@ -22,16 +23,28 @@
     list-style: none;
 }
 
-
-/*Animates the border bottom on the navbar items*/
 .nav-list-item:after {
     display:block;
     content: '';
     border-bottom: solid 3px white;  
     transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
-  }
+    transition: transform 200ms ease-in-out;
+}
 
 .nav-list-item:hover:after {
     transform: scaleX(1);
+}
+
+.nav-list-item:hover{
+    animation: scaleonefive 300ms ease-in-out forwards;
+    transform: scale(1);
+}
+
+@keyframes scaleonefive {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
 }
