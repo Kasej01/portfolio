@@ -1,8 +1,11 @@
 .navbar{
     width: auto;
-    background-color: rgba(0, 0, 0, 0);
     color: white;
     max-width: 100%;
+    box-shadow: 0 1rem 1rem -1rem rgba(218, 120, 248, 0.5), inset 0rem -1rem 1rem -1rem rgba(218, 120, 248, 0.5);
+    background-color: black;
+    position: relative;
+    z-index: 10;
 }
 
 
@@ -12,6 +15,7 @@
     padding: 1.2vw;
     margin: 0;
     justify-content: space-around;
+
 }
 
 .nav-list-item a{
@@ -26,7 +30,7 @@
 .nav-list-item:after {
     display:block;
     content: '';
-    border-bottom: solid 3px white;  
+    border-bottom: solid 2px rgba(218, 120, 248, 0.25);
     transform: scaleX(0);  
     transition: transform 200ms ease-in-out;
 }

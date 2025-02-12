@@ -7,9 +7,11 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 
 function Home() {
+    var occupation = "SoftwareEngineer"
 
     return (
-        <div className = "home-container">
+        <div className="home-container">
+            <div className="about-me">Test</div>
             <div className="socials">
                 <p className="socials-title">Socials</p>
                 <div className="icons-container">
