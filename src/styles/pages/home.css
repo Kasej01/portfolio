@@ -1,126 +1,83 @@
-.home-container {  
+/**********************
+*    Main section     *
+**********************/
+.home-container{
     display: grid;
-    grid-template-columns: 0.25fr 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
-    grid-template-rows: 1fr 1fr 1fr 0.5fr;
-    grid-auto-flow: row;
+    grid-template-columns: 0.05fr 0.20fr 1fr 0.20fr 0.1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
     grid-template-areas:
-      ". . . . . . ."
-      ". about-me about-me about-me . socials ."
-      ". about-me about-me about-me . socials ."
-      ". . . . . . .";
+    ". . . . ."
+    ". quicknav . aboutme ."
+    ". quicknav . aboutme socials"
+    ". . . . socials"
+    ". . . . ."
+    ". education education education .";
+}
+
+.home-container{
     color: white;
 }
 
-.about-me { 
-    grid-area: about-me; 
-    background-color: grey;
+.quick-navigation{
+    grid-area: quicknav;
+    display: flex;
+    flex-direction: column;
 }
-  
-.socials { 
-    grid-area: socials; 
+
+.about-me{
+    grid-area: aboutme;
 }
-  
+
+.socials{
+    grid-area: socials;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    justify-content: center;
+    text-align: center;
+}
+
+.socials-title{
+    border-left: 2px solid white;
+}
+
+#education{
+    grid-area: education;
+}
+
+.icons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icon{
+    transform: scale(2);
+    margin: 2rem 1rem
+}
 
 
 /*************************
 *    Socials section     *
 *************************/
-.socials {  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.25fr 1fr 1fr 0.25fr;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      ". icons-container socials-title"
-      ". icons-container socials-title"
-      ". icons-container socials-title"
-      ". icons-container socials-title"
-      ". icons-container socials-title"
-      ". icons-container socials-title";
-  }
-  
 
 
-.socials-title{
-    grid-area: socials-title;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    border-left: solid 1px white;
-}
-/************
-*   Icons   *
-************/
 
-.icons-container{
-    grid-area: icons-container;
-    display: flex;
-    flex-direction: column;
-}
 
-#github-icon{
-    color: #6925b8;
-}
 
-#linkedin-icon{
-    color: #0A66C2;
-}
 
-.icon-a{
-    transform: scale(2);
-    margin: 1.5rem;
-}
+/*************************
+*    Buttons section     *
+*************************/
 
-.icon-a:hover{
-    animation: socialscale 300ms ease-in-out forwards;
-}
+.quick-nav-button{
+    background-color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-align: center;
 
-@keyframes socialscale{
-    0%{
-
-    }
-    100%{
-        transform: scale(2.5);
-    }
-}
-
-@media screen and (max-width: 600px){
-
-    .home-container{
-        grid-template-columns: 100%;
-    }
-
-    .socials{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 4;
-        justify-content: center;
-        text-align: center;
-        transform: scale(1);
-    }
-
-    .socials-title{
-        writing-mode: horizontal-tb;
-        border-bottom: solid 1px white;
-        border-left: none;
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        text-align: center;
-        margin: 0;
-    }
-    .icons-container{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 2rem;;
+    box-shadow: 0rem 0rem 1rem 0.5rem rgb(134, 31, 134, 0.5);
 }

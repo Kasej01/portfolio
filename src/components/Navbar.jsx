@@ -18,6 +18,7 @@ function Navbar (){
                 <li className="nav-list-item"><a href="/">About</a></li>
                 <li className="nav-list-item"><a href="/projects">Projects</a></li>
                 <li className="nav-list-item"><a href="/contact">Contact</a></li>
+                <li className="nav-list-item"><a href="/resume" className="resume-btn">Resume</a></li>
             </ul>
         </div>
     );

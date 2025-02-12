@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/pages/home.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -7,13 +5,17 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 
 function Home() {
-    var occupation = "SoftwareEngineer"
-
     return (
         <div className="home-container">
-            <div className="about-me">Test</div>
+            <div className="quick-navigation">
+                <h2 className="quick-nav-title">Quick Navigation</h2>
+                <a className="quick-nav-button" href="#projects">Projects</a>
+                <a className="quick-nav-button" href="#education">Education</a>
+            </div>
+            <div className="about-me">
+                
+            </div>
             <div className="socials">
-                <p className="socials-title">Socials</p>
                 <div className="icons-container">
                     <a href="https://github.com/Kasej01" target="_blank" rel="noopener noreferrer" className="icon-a" id="github-icon">
                         <FontAwesomeIcon icon={faGithub} className="icon" />
@@ -22,7 +24,9 @@ function Home() {
                         <FontAwesomeIcon icon={faLinkedin} className="icon" />
                     </a>
                 </div>
+                <p className="socials-title">Socials</p>
             </div>
+            <div id="education">Education</div>
         </div>
     );
 }

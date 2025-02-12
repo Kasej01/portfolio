@@ -1,12 +1,15 @@
+/******************
+*   Main Navbar   *
+******************/
 .navbar{
     color: white;
     width: auto;
     height: 6vh;
     max-width: 100%;
     display: grid;
-    grid-template-columns: 0.1fr 1fr 0.5fr 1fr 0.1fr;
+    grid-template-columns: 0.1fr 1fr 0.5fr 1fr 0.05fr;
     grid-template-areas:
-    ". navtitle . navlist .";
+    ". navtitle . navlist.";
     align-items: center;
     box-shadow: 0 1rem 1rem -1rem rgba(218, 120, 248, 0.5), inset 0rem -1rem 1rem -1rem rgba(218, 120, 248, 0.5);
     background-color: black;
@@ -62,26 +65,42 @@
     animation: scaleonefive 300ms ease-in-out forwards;
     transform: scale(1);
 }
-
 .hamburger{
     grid-area: hamburger;
     display: none;
 }
 
-@keyframes scaleonefive {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.5);
-    }
+
+/********************
+*   Resume Button   *
+********************/
+.resume-btn{
+    grid-area: resume;
+    color: purple;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(212, 167, 212);
+    padding: 0.5rem;
 }
 
-@media screen and (max-width: 850px){
+.resume-btn:hover{
+    background: linear-gradient(90deg, rgb(255, 108, 255), rgb(155, 0, 155), rgb(255, 198, 255));
+    animation: gradientbtn 300ms ease-in-out forwards;
+    background-size: 400% 400%;
+	animation: gradient 2s ease infinite;
+    color: black;
+}
+
+/********************
+*   Media Queries   *
+********************/
+
+@media screen and (max-width: 900px){
     .navbar{
-        grid-template-columns: 0.1fr 1fr 0.15fr 1.5fr 0.1fr;
+        grid-template-columns: 0.1fr 1fr 0.15fr 1.5fr 0.1fr 0.1fr;
         grid-template-areas:
-        ". navtitle . navlist .";
+        ". navtitle . navlist resume .";
     }
 
     .nav-list-item a{
@@ -89,7 +108,7 @@
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
     .nav-name{
         font-size: 1.5rem;
     }
@@ -118,6 +137,10 @@
         flex-direction: column;
     }
 
+    .nav-list-item{
+        margin: 1rem;
+    }
+
     .hamburger{
         display:block;
     }
@@ -125,4 +148,29 @@
     .nav-list-item:hover{
         animation: none;
     }
+}
+
+
+/****************
+*   Keyframes   *
+****************/
+@keyframes scaleonefive {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
