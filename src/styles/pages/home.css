@@ -3,48 +3,92 @@
 **********************/
 .home-container{
     display: grid;
-    grid-template-columns: 0.05fr 0.20fr 1fr 0.20fr 0.1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.1fr 0.30fr 0.2fr 2fr 0.5fr 0.2fr 0.2fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr auto auto auto auto;
 
     grid-template-areas:
-    ". . . . ."
-    ". quicknav . aboutme ."
-    ". quicknav . aboutme socials"
-    ". . . . socials"
-    ". . . . ."
-    ". education education education .";
+    ". . . . . . ."
+    ". quicknav . aboutme . . socials"
+    ". quicknav . . . . ."
+    ". . . . . . ."
+    ". projects projects projects projects projects ."
+    ". education education education education education ."
+    ". experience experience experience experience experience ."
+    ". skills skills skills skills skills .";
 }
 
 .home-container{
     color: white;
 }
 
-.quick-navigation{
-    grid-area: quicknav;
-    display: flex;
-    flex-direction: column;
-}
-
+/*************************
+*    Aboutme section     *
+*************************/
 .about-me{
     grid-area: aboutme;
 }
 
+.about-me{
+    border: 1px dotted grey;
+    border-radius: 0.5rem;
+}
+.about-me{
+    display: grid;
+    grid-template-columns: 0.125fr 1fr 0.125fr;
+    grid-template-rows: 0.125fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ". . ."
+    ". myname ."
+    ". myoccupation ."
+    ". mystory .";
+    column-gap: 1rem;
+}
+
+.game-font{
+    font-family: "Sixtyfour", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0;
+}
+
+.myname{
+    color: white;
+    grid-area: myname;
+    font-size: 2rem;
+}
+
+.myoccupation{
+    grid-area: myoccupation;
+    font-size: 1.25rem;
+}
+
+.mystory{
+    font-size: 1rem;
+    grid-area: mystory;
+}
+
+
+
+
+/*************************
+*    Socials section     *
+*************************/
 .socials{
     grid-area: socials;
     writing-mode: vertical-lr;
     text-orientation: upright;
     justify-content: center;
     text-align: center;
+    font-weight: 600;
+    font-size: 1.25rem;
 }
 
 .socials-title{
     border-left: 2px solid white;
 }
-
-#education{
-    grid-area: education;
-}
-
 .icons-container{
     display: flex;
     flex-direction: row;
@@ -57,11 +101,59 @@
 }
 
 
-/*************************
-*    Socials section     *
-*************************/
 
 
+/***************************
+*    Education section     *
+***************************/
+#education{
+    grid-area: education;
+}
+
+/**************************
+*    Projects section     *
+**************************/
+#projects{
+    grid-area: projects;
+}
+
+/****************************
+*    Experience section     *
+****************************/
+#experience{
+    grid-area: experience;
+}
+/************************
+*    Skills section     *
+************************/
+#skills{
+    grid-area: skills;
+}
+
+/**************************
+*    Quicknav section     *
+**************************/
+.quick-navigation{
+    grid-area: quicknav;
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-nav-button{
+    background-color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-align: center;
+    color:  #A03E99;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 2rem;;
+    box-shadow: 0rem 0rem 1rem 0.5rem rgb(134, 31, 134, 0.5);
+}
+
+.quick-nav-button:hover{
+    animation: expandboxshadow 300ms ease forwards;
+}
 
 
 
@@ -70,14 +162,97 @@
 *    Buttons section     *
 *************************/
 
-.quick-nav-button{
-    background-color: black;
-    text-decoration: none;
-    font-size: 1.1rem;
-    text-align: center;
+#linkedin-icon{
+    color: #0072b1;
+}
+#github-icon{
+    color: rgb(174, 0, 255);
+}
 
-    padding: 0.5rem;
-    margin: 1rem;
-    border-radius: 2rem;;
-    box-shadow: 0rem 0rem 1rem 0.5rem rgb(134, 31, 134, 0.5);
+.icon:hover{
+    animation: expandbutton 400ms ease forwards;
+}
+
+
+
+/*******************
+*    Keyframes     *
+*******************/
+
+@keyframes expandbutton{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(2.5);
+    }
+}
+@keyframes expandboxshadow {
+    0%{
+        box-shadow: 0rem 0rem 1rem 0.5rem rgb(134, 31, 134, 0.5);
+    }
+    100%{
+        box-shadow: 0rem 0rem 1rem 1rem rgb(134, 31, 134, 0.5);
+    }
+}
+
+
+/***********************
+*    Media Queries     *
+***********************/
+@media screen and (max-width: 768px){
+    .home-container{
+        grid-template-areas:
+        ". . ."
+        ". aboutme ."
+        ". socials ."
+        ". projects ."
+        ". education ."
+        ". experience ."
+        ". skills .";
+        grid-template-columns: 0.05fr 1fr 0.05fr;
+        grid-template-rows: 0.15fr auto auto auto auto;
+        row-gap: 1rem;
+    }
+    .quick-navigation{
+        display: none;
+    }
+
+    .about-me{
+        justify-content: center;
+        margin: auto;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 1rem;
+    }
+    .myname{
+        font-size: 1.25rem;
+    }
+    .myoccupation{
+        font-size: 1.1rem;
+    }
+    .mystory{
+        font-size: 1rem;
+    }
+
+    .socials{
+        display: grid;
+        grid-template-areas:
+        "socialtitle iconcontainer";
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    .socials-title{
+        writing-mode:horizontal-tb;
+        border: none;
+        border-bottom: 1px solid white;
+        grid-area: socialtitle;
+        width: 60vw;
+        margin: auto;
+    }
+    .icons-container{
+        grid-area: iconcontainer;
+        display: flex;
+        flex-direction: column;
+    }
 }

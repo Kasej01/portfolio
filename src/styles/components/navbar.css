@@ -74,8 +74,10 @@
 /********************
 *   Resume Button   *
 ********************/
+.resume-list-item{
+    list-style: none;
+}
 .resume-btn{
-    grid-area: resume;
     color: purple;
     text-decoration: none;
     text-align: center;
@@ -88,6 +90,7 @@
     background: linear-gradient(90deg, rgb(255, 108, 255), rgb(155, 0, 155), rgb(255, 198, 255));
     animation: gradientbtn 300ms ease-in-out forwards;
     background-size: 400% 400%;
+    animation: none;
 	animation: gradient 2s ease infinite;
     color: black;
 }
@@ -166,11 +169,14 @@
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
+        transform: scale(1);
 	}
 	50% {
 		background-position: 100% 50%;
+        transform: scale(1);
 	}
 	100% {
 		background-position: 0% 50%;
+        transform: scale(1);
 	}
 }
