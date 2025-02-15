@@ -124,20 +124,16 @@
     
 }
 
-
-
 /***************************
 *    Education section     *
-***************************/
+****************************/
 #education{
     grid-area: education;
 }
 
-/**************************
-*    Projects section     *
-**************************/
-#projects{
-    grid-area: projects;
+.section-header{
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
 }
 
 /****************************
@@ -145,6 +141,70 @@
 ****************************/
 #experience{
     grid-area: experience;
+    margin: auto;
+    margin-top: 15vh;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    ". experiencetitle ."
+    "first second third";
+
+    #experience-title{
+        grid-area: experiencetitle;
+    }
+    #first{
+        grid-area: first;
+        border-right: 1px solid white;
+    }
+    #second{
+        grid-area: second;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
+    #third{
+        grid-area: third;
+        border-left: 1px solid white;
+    }
+    .experience-item{
+        overflow: hidden;
+        padding: 1rem 2rem;
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+    }
+
+    .experience-item .contents{
+        opacity: 0;
+    }
+
+    .experience-item:hover{
+        animation: widen 1s ease forwards;
+        .contents{
+            animation: animateup 1s ease forwards;
+        }
+    }
+}
+
+
+@keyframes animateup{
+    0%{
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+@keyframes widen{
+    100%{
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+}
+
+/**************************
+*    Projects section     *
+**************************/
+#projects{
+    grid-area: projects;
 }
 /************************
 *    Skills section     *

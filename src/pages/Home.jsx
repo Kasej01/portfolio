@@ -3,6 +3,7 @@ import "../styles/pages/home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ProjectCards from "../components/ProjectCards";
+import EducationCards from "../components/EducationCards";
 
 function Home() {
     return (
@@ -33,11 +34,36 @@ function Home() {
                     </div>
                     <p className="socials-title">Socials</p>
                 </div>
-                {/* <div className="down-arrow"><a href="#projects" className="scroll-button">&#129171;</a></div> */}
             </div>
             <ProjectCards count={3}/>
-            <div id="education">Education</div>
-            <div id="experience">Experience</div>
+            <EducationCards/>
+            <div id="experience">
+                <h1 className="section-header" id="experience-title">Experience</h1>
+                <div className="experience-item" id="first">
+                    <h1 className="year">2022</h1>
+                    <div className="contents">
+                        <h2 className="achievement">Bachelor of Science</h2>
+                        <h3 className="study">Computer Science</h3>
+                        <h3 className="school">Tennessee Technological Univeristy</h3>
+                    </div>
+                </div>
+                <div className="experience-item" id="second">
+                    <h1 className="year">2023</h1>
+                    <div className="contents">
+                        <h2 className="achievement">Enrolled in Graduate School</h2>
+                        <h3 className="study">A.I. and Machine Learning</h3>
+                        <h3 className="school">Tennessee Technological Univeristy</h3>
+                    </div>
+                </div>
+                <div className="experience-item" id="third">
+                    <h1 className="year">2024</h1>
+                    <div className="contents">
+                        <h2 className="achievement">Master of Science</h2>
+                        <h3 className="study">A.I. and Machine Learning</h3>
+                        <h3 className="school">Tennessee Technological Univeristy</h3>
+                    </div>
+                </div>
+            </div>
             <div id="skills">Skills</div>
         </div>
     );

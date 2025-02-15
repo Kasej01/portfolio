@@ -1,0 +1,31 @@
+#education{
+    margin: auto;
+    text-align: center;
+}
+
+#education{
+    .cards{
+        margin: 0rem 3rem;
+        border-radius: 2rem;
+        box-shadow: 0rem 0rem 2rem 0rem rgb(65, 65, 65, 0.3);
+        padding: 1rem;
+        .accomplishment{
+            font-size: 1.8rem;
+        }
+        .major{
+            font-size: 1.5rem;
+        }
+        .school{
+            font-size: 1.25rem;
+        }
+    }
+}
+#education
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hoverformore{
+    color: rgb(90, 90, 90);
+}
