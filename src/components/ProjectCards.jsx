@@ -46,7 +46,7 @@ export default function ProjectCards({count}) {
     let content;
     content = (
         <div id="projects">
-            <h3>Most recent Projects</h3>
+            <h3 className="title">Most recent Projects</h3>
             <ul className="all-cards">
                 {repoNames.slice(0, count).map((repo, index) => (
                     <li key={index} className="card-container">
@@ -59,6 +59,7 @@ export default function ProjectCards({count}) {
                     </li>
                 ))}
             </ul>
+            <a href="/projects" className="more-projects">View All Projects</a>
         </div>
     );
 
