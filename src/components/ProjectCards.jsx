@@ -45,6 +45,10 @@ export default function ProjectCards({ count }) {
 
   projects.sort((a, b) => new Date(b.updated) - new Date(a.updated));
 
+  if(count > repoUrls.length){
+    count=repoUrls.length;
+  }
+
   const topProjects = projects.slice(0, count);
 
   return (
