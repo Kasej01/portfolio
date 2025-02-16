@@ -1,11 +1,11 @@
 import React from 'react';
-import '../styles/components/educationcards.css'
+import '../styles/components/educationcards.css';
 
 export default function EducationCards(){
 
     return (
         <div id="education">
-            <h1 className="section-header">Education</h1>
+            <h1 className="section-header game-font">Education</h1>
             <div className="content">
                 <div className="cards" id="card1">
                     <div className="front">

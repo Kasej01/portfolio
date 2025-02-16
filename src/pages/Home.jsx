@@ -40,7 +40,7 @@ function Home() {
             <div id="experience">
                 <h1 className="section-header" id="experience-title">Experience</h1>
                 <div className="experience-item" id="first">
-                    <h1 className="year">2022</h1>
+                    <h1 className="year game-font">2022</h1>
                     <div className="contents">
                         <h2 className="achievement">Bachelor of Science</h2>
                         <h3 className="study">Computer Science</h3>
@@ -48,7 +48,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="experience-item" id="second">
-                    <h1 className="year">2023</h1>
+                    <h1 className="year game-font">2023</h1>
                     <div className="contents">
                         <h2 className="achievement">Enrolled in Graduate School</h2>
                         <h3 className="study">A.I. and Machine Learning</h3>
@@ -56,7 +56,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="experience-item" id="third">
-                    <h1 className="year">2024</h1>
+                    <h1 className="year game-font">2024</h1>
                     <div className="contents">
                         <h2 className="achievement">Master of Science</h2>
                         <h3 className="study">A.I. and Machine Learning</h3>

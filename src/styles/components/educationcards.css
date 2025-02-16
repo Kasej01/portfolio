@@ -1,6 +1,9 @@
 #education{
     margin: auto;
     text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    text-align: center;
 }
 
 #education{
@@ -9,6 +12,7 @@
         border-radius: 2rem;
         box-shadow: 0rem 0rem 2rem 0rem rgb(65, 65, 65, 0.3);
         padding: 1rem;
+        margin: auto;
         .accomplishment{
             font-size: 1.8rem;
         }
