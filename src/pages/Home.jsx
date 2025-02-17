@@ -37,8 +37,8 @@ function Home() {
             </div>
             <ProjectCards count={3}/>
             <EducationCards/>
-            <div id="experience">
-                <h1 className="section-header" id="experience-title">Experience</h1>
+            <div className="section" id="experience">
+                <h1 className="section-header game-font" id="experience-title">Experience</h1>
                 <div className="experience-item" id="first">
                     <h1 className="year game-font">2022</h1>
                     <div className="contents">

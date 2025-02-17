@@ -29,6 +29,19 @@
       "SCAN" 0;
   }
 
+  .section-header{
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-top: 15vh;
+    border-top: 2px solid white;
+  }
+
+  .home-container .section{
+    margin: 0vh 3vw;
+  }
+
+
 /****************
 *   Section 1   *
 ****************/
@@ -141,7 +154,6 @@
 ****************************/
 #experience{
     grid-area: experience;
-    margin: auto;
     margin-top: 15vh;
     text-align: center;
     display: grid;
@@ -303,6 +315,58 @@
 /***********************
 *    Media Queries     *
 ***********************/
+@media screen and (max-width: 768px){
+    #experience{
+        grid-area: experience;
+        margin-top: 15vh;
+        text-align: center;
+        display: grid;
+        grid-template-areas:
+        "experiencetitle"
+        "first"
+        "second" 
+        "third";
+    
+        #first{
+            border-bottom: 1px solid grey;
+            border-right: none;
+        }
+        #second{
+            border-right: none;
+            border-left:none;
+            border-bottom: 1px solid grey;
+        }
+        #third{
+            border-left: none;
+            border-bottom: 1px solid grey;
+        }
+        .experience-item{
+            overflow: hidden;
+            padding: 1rem 2rem;
+        }
+        .experience-item .contents{
+            opacity: 1;
+        }
+        .experience-item:hover{
+            animation: none;
+            .contents{
+                animation: none;
+            }
+        }
+        .year{
+            font-size: 1.75rem;
+        }
+        .achievement{
+            font-size: 1.25rem;
+        }
+        .study{
+            font-size: 1.1rem;
+        }
+        .school{
+            font-size: .8rem;
+        }
+    }
+}
 @media screen and (min-width: 476px) and (max-width: 768px){
     .home-container{
         grid-template-areas:
@@ -342,7 +406,6 @@
             margin-top: calc(var(--navbar-height) - 2vh);
             height: calc(100vh - var(--navbar-height));
             width: 100vw;
-            margin-bottom: 5vh;
             grid-template-rows: 10% 60% 30%;
         }
     
