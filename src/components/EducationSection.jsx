@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/components/educationcards.css'
 
-export default function EducationCards(){
+export default function EducationSection(){
 
     return (
         <div className="section" id="education">

@@ -3,7 +3,7 @@ import "../styles/pages/home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ProjectCards from "../components/ProjectCards";
-import EducationCards from "../components/EducationCards";
+import EducationSection from "../components/EducationSection";
 
 function Home() {
     return (
@@ -36,7 +36,7 @@ function Home() {
                 </div>
             </div>
             <ProjectCards count={3}/>
-            <EducationCards/>
+            <EducationSection/>
             <div className="section" id="experience">
                 <hr className="section-split"/>
                 <h1 className="section-header game-font" id="experience-title">Experience</h1>
