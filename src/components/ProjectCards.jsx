@@ -49,7 +49,8 @@ export default function ProjectCards({ count }) {
 
   return (
     <div className="section" id="projects">
-      <h3 className="section-header title game-font">Most recent Projects</h3>
+      <hr className="section-split"/>
+      <h3 className="section-header title game-font">Recently Updated Projects</h3>
       <ul className="all-cards">
         {topProjects.map((repo, index) => (
           <li key={index} className="card-container">

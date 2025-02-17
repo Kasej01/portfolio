@@ -5,6 +5,7 @@ export default function EducationCards(){
 
     return (
         <div className="section" id="education">
+            <hr className="section-split"/>
             <h1 className="section-header game-font">Education</h1>
             <div className="content">
                 <div className="cards" id="card1">

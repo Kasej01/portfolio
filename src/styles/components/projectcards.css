@@ -1,6 +1,12 @@
 #projects{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas:
+    "hr hr hr"
+    "projectstitle projectstitle projectstitle"
+    "cards cards cards"
+    ". button .";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
 }
 
@@ -16,9 +22,14 @@
 .all-cards{
     display: flex;
     flex-wrap: wrap;
+    grid-area: cards;
     justify-content: center;
     gap: 1rem;
     width: auto;
+}
+
+.more-projects{
+    grid-area: button;
 }
 
 .link-container{
@@ -64,6 +75,7 @@
 
 #projects .title{
     margin-bottom: 2rem;
+    grid-area: projectstitle;
 }
 
 .more-projects{
@@ -108,8 +120,32 @@
     }
 }
 
+@media screen and (min-width: 769px){
+    .more-projects{
+        width: 50%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+}
+
 @media screen and (max-width:500px){
     .card-container{
         width: 60%;
+    }
+
+    #projects{
+        display: grid;
+        grid-template-areas:
+        "hr hr hr"
+        "projectstitle projectstitle projectstitle"
+        "cards cards cards"
+        "button button button";
+        align-items: center;
+    }
+
+    .more-projects{
+        width: 70%;
+        margin: auto;
+        margin-top: 2rem;
     }
 }

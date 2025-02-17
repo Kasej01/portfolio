@@ -31,16 +31,20 @@
 
   .section-header{
     font-size: 2.25rem;
+    text-align: center;
     margin-bottom: 1rem;
     text-align: center;
     padding-top: 15vh;
-    border-top: 2px solid white;
   }
 
   .home-container .section{
     margin: 0vh 3vw;
   }
 
+
+  .section-split{
+    grid-area: hr;
+}
 
 /****************
 *   Section 1   *
@@ -158,6 +162,7 @@
     text-align: center;
     display: grid;
     grid-template-areas:
+    "hr hr hr"
     ". experiencetitle ."
     "first second third";
 
@@ -328,17 +333,17 @@
         "third";
     
         #first{
-            border-bottom: 1px solid grey;
             border-right: none;
+            margin-top: 2rem;
         }
         #second{
             border-right: none;
             border-left:none;
-            border-bottom: 1px solid grey;
+            margin-top: 2rem;
         }
         #third{
             border-left: none;
-            border-bottom: 1px solid grey;
+            margin-top: 2rem;
         }
         .experience-item{
             overflow: hidden;
@@ -366,6 +371,9 @@
             font-size: .8rem;
         }
     }
+
+    /*Section borders */
+
 }
 @media screen and (min-width: 476px) and (max-width: 768px){
     .home-container{
@@ -548,5 +556,12 @@
     .section-header{
         font-size: 1.25rem;
         margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: 789px){
+    .section-split{
+        width: 40%;
+        margin: auto;
     }
 }

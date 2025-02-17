@@ -38,6 +38,7 @@ function Home() {
             <ProjectCards count={3}/>
             <EducationCards/>
             <div className="section" id="experience">
+                <hr className="section-split"/>
                 <h1 className="section-header game-font" id="experience-title">Experience</h1>
                 <div className="experience-item" id="first">
                     <h1 className="year game-font">2022</h1>

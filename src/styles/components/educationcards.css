@@ -3,6 +3,7 @@
     margin-top: 10vh;
     display: grid;
     grid-template-areas:
+    "hr hr hr"
     ". sectionheader ."
     "content content content"
 }
