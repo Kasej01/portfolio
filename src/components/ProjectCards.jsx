@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import fetchAllRepositories from '../utilities/fetchFromGit';
 import '../styles/components/projectcards.css';
 
-export default function ProjectCards({ count }) {
+export default function ProjectCards({count, header}) {
   const [repoNames, setRepoNames] = useState([]);
   const [repoUrls, setRepoUrls] = useState([]);
   const [repoDescriptions, setRepoDescriptions] = useState([]);
@@ -47,10 +47,14 @@ export default function ProjectCards({ count }) {
 
   const topProjects = projects.slice(0, count);
 
+  if(count > repoNames.length){
+    count=repoNames.length;
+  }
+
   return (
     <div className="section" id="projects">
       <hr className="section-split"/>
-      <h3 className="section-header title game-font">Recently Updated Projects</h3>
+      <h3 className="section-header title game-font">{header}</h3>
       <ul className="all-cards">
         {topProjects.map((repo, index) => (
           <li key={index} className="card-container">

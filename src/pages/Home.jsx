@@ -35,7 +35,7 @@ function Home() {
                     <p className="socials-title">Socials</p>
                 </div>
             </div>
-            <ProjectCards count={3}/>
+            <ProjectCards count={3} header="Recently Updated Projects"/>
             <EducationSection/>
             <div className="section" id="experience">
                 <hr className="section-split"/>

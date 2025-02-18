@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Hero from './components/Hero';
+import Projects from './pages/Projects';
 import './styles/blur.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </div>
     </>
