@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCards from '../components/ProjectCards';
+import '../styles/components/projectcards.css';
 
 
 export default function Projects(){

@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.projects-container{
+    color: white;
+}
+
 .card-container{
     border: 1px solid rgb(138, 19, 168);
     border-radius: 1rem;
