@@ -101,7 +101,7 @@
         width: 40%;
     }
     .repo-desc{
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-bottom: 0;
     }
 
@@ -130,17 +130,55 @@
 
 @media screen and (max-width:500px){
     .card-container{
-        width: 60%;
+        width: 40%;
     }
 
-    #projects{
-        display: grid;
-        grid-template-areas:
-        "hr hr hr"
-        "projectstitle projectstitle projectstitle"
-        "cards cards cards"
-        "button button button";
-        align-items: center;
+    .repo-name{
+        font-size: 0.8rem;
+    }
+    
+    .repo-desc{
+        font-size: 0.7rem;
+        margin: 0.3rem;
+    }
+    
+    .repo-update{
+        font-size: 0.6rem;
+        margin: 0.3rem;
+    }
+    
+    .repo-image{
+        width: 80%;
+        padding: 0.5rem;
+    }
+
+    .more-projects{
+        width: 70%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width:350px){
+    .card-container{
+        width: 42%;
+    }
+
+    .repo-name{
+        font-size: 0.8rem;
+    }
+    
+    .repo-desc{
+        font-size: 0.6rem;
+    }
+    
+    .repo-update{
+        font-size: 0.5rem;
+    }
+    
+    .repo-image{
+        width: 80%;
+        padding: 0.5rem;
     }
 
     .more-projects{

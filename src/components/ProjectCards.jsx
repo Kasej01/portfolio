@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import fetchAllRepositories from '../utilities/fetchFromGit';
 import '../styles/components/projectcards.css';
 
-export default function ProjectCards({count, header}) {
+export default function ProjectCards({count, header, button}) {
   const [repoNames, setRepoNames] = useState([]);
   const [repoUrls, setRepoUrls] = useState([]);
   const [repoDescriptions, setRepoDescriptions] = useState([]);
@@ -47,8 +47,21 @@ export default function ProjectCards({count, header}) {
 
   const topProjects = projects.slice(0, count);
 
+  //If the count is a number larger than the number of repos returned, display all repos
   if(count > repoNames.length){
     count=repoNames.length;
+  }
+  let content="";
+
+  if(button=="false"){
+    content="";
+  }
+  else{
+    content=(
+      <a href="/projects" className="more-projects">
+        View All Projects
+      </a>
+    );
   }
 
   return (
@@ -74,7 +87,7 @@ export default function ProjectCards({count, header}) {
                   repo.name +
                   ".png"
                 }
-                alt={repo.name}
+                alt={repo.name + " banner photo"}
               />
               <p className="repo-name">{repo.name}</p>
               <p className="repo-desc">{repo.desc}</p>
@@ -83,9 +96,7 @@ export default function ProjectCards({count, header}) {
           </li>
         ))}
       </ul>
-      <a href="/projects" className="more-projects">
-        View All Projects
-      </a>
+      {content}
     </div>
   );
 }
