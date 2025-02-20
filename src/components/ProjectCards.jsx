@@ -67,7 +67,7 @@ export default function ProjectCards({count, header, button}) {
   return (
     <div className="section" id="projects">
       <hr className="section-split"/>
-      <h3 className="section-header game-font">{header}</h3>
+      <h3 className="section-header title game-font">{header}</h3>
       <ul className="all-cards">
         {topProjects.map((repo, index) => (
           <li key={index} className="card-container">
