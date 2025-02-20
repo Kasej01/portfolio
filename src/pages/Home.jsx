@@ -65,7 +65,9 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div id="skills">Skills</div>
+            <div id="skills">
+                <div className="game-font section-header">Skills</div>
+            </div>
         </div>
     );
 }
