@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ProjectCards from "../components/ProjectCards";
 import EducationSection from "../components/EducationSection";
+import Skills from '../components/Skills';
 
 function Home() {
     return (
@@ -65,7 +66,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div id="skills">Skills</div>
+            <Skills />
         </div>
     );
 }
