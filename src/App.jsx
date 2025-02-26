@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Hero from './components/Hero';
 import Projects from './pages/Projects';
+import Footer from './components/Footer';
 import './styles/blur.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
+        <Footer />
       </div>
     </>
   );
