@@ -44,25 +44,24 @@ function Home() {
                 <div className="experience-item" id="first">
                     <h1 className="year game-font">2022</h1>
                     <div className="contents">
-                        <h2 className="achievement">Bachelor of Science</h2>
-                        <h3 className="study">Computer Science</h3>
-                        <h3 className="school">Tennessee Technological Univeristy</h3>
+                        <h2 className="achievement">Software Developer Internship Start</h2>
+                        <h3 className="study">Safety & Security Team</h3>
+                        <h3 className="school"> - Tennessee Valley Authority</h3>
                     </div>
                 </div>
                 <div className="experience-item" id="second">
                     <h1 className="year game-font">2023</h1>
                     <div className="contents">
-                        <h2 className="achievement">Enrolled in Graduate School</h2>
-                        <h3 className="study">A.I. and Machine Learning</h3>
-                        <h3 className="school">Tennessee Technological Univeristy</h3>
+                        <h3 className="achievement">Admin for NSA Funded Cloud Security Workshop</h3>
+                        <h3 className="study">Teachers Admin for Database Management Systems Course</h3>
+                        <h3 className="school"> - Tennessee Technological Univeristy</h3>
                     </div>
                 </div>
                 <div className="experience-item" id="third">
                     <h1 className="year game-font">2024</h1>
                     <div className="contents">
-                        <h2 className="achievement">Master of Science</h2>
-                        <h3 className="study">A.I. and Machine Learning</h3>
-                        <h3 className="school">Tennessee Technological Univeristy</h3>
+                        <h2 className="achievement">Developed Error detection AI for 3D printing</h2>
+                        <h3 className="school"> - Tennessee Technological Univeristy</h3>
                     </div>
                 </div>
             </div>
