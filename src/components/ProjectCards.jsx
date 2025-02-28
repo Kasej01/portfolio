@@ -17,6 +17,7 @@ export default function ProjectCards({count, header, button}) {
         const urls = [];
         const descriptions = [];
         const updates = [];
+        console.log(data);
 
         data.forEach(repo => {
           names.push(repo.name);
