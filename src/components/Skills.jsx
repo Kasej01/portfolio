@@ -36,7 +36,7 @@ export default function Skills () {
             <h1 className="section-header game-font">Skills</h1>
             <h1 className="language-header">Languages</h1>
             <h3 className="section-desc">Under each programming language is a list of links to my github repositories that use that language</h3>
-            <div className="language-container">
+            <div className="language-container flex-row">
                 {distinctLanguages.map((language, index) => (
                     <div key={index} className="ind-lang-container">
                         <div className="language-title">{language}</div>
@@ -51,6 +51,11 @@ export default function Skills () {
                 ))}
             </div>
             <h1 className="language-header">Frameworks</h1>
+            <div className="frameworks-container flex-row framework-list">
+                <h3 className="framework-item">React.js</h3>
+                <h3 className="framework-item">Node.js</h3>
+                <h3 className="framework-item">Maven</h3>
+            </div>
         </div>
     );
 }
