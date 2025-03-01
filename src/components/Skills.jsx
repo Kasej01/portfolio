@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import fetchAllRepositories from '../utilities/fetchFromGit';
+import '../styles/components/skills.css';
 
 export default function Skills () {
     
@@ -33,8 +34,8 @@ export default function Skills () {
         <div className="section" id="skills">
             <hr className="section-split"/>
             <h1 className="section-header game-font">Skills</h1>
-
-            {/* Display language container */}
+            <h1 className="language-header">Languages</h1>
+            <h3 className="section-desc">Under each programming language is a list of links to my github repositories that use that language</h3>
             <div className="language-container">
                 {distinctLanguages.map((language, index) => (
                     <div key={index} className="ind-lang-container">
@@ -43,12 +44,13 @@ export default function Skills () {
                             {repos
                                 .filter(repo => repo.languages.includes(language))
                                 .map((repo, repoIndex) => (
-                                    <li key={repoIndex}>{repo.name}</li>
+                                    <a href={repo.url} className="repo-name" key={repoIndex}>{repo.name}</a>
                                 ))}
                         </ul>
                     </div>
                 ))}
             </div>
+            <h1 className="language-header">Frameworks</h1>
         </div>
     );
 }
