@@ -1,42 +1,96 @@
-@keyframes hero-animation {
-    0% {
-        transform: translate(0vw, 20vh);
-        opacity: 0.3;
-    }
-    30% {
-        transform: translate(0vw, 0vh);
-        opacity: 1;
-    }
-    60%{
-        transform: translate(0vw, 0vh);
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translate(-50vw, 0vh);
-        display: none;
-    }
-}
-
-.hero-container{
+.hero-container {
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 0;
+    left: 50%; /* Start from the middle */
     right: 0;
+    margin: auto;
     text-align: center;
     padding-top: 15vh;
-    animation: hero-animation 6s ease forwards;
+    animation: hero-animation 4s ease forwards;
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.hero-title{
+.hero-title,
+.hero-desc{
     font-size: 4rem;
     color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 1rem 0rem;
+    max-width: 65vw;
+    border-right: 5px solid white;
+
 }
 
-.hero-desc{
-    font-size: 2rem;
-    color: white;
+
+.hero-title{
+    animation: typewriter 4s steps(20) forwards alternate,
+        typewriter-backwards 4s 7.5s steps(20) forwards alternate,
+        blink 4s steps(20) forwards normal,
+        blink 5s steps(20) 7s forwards normal,
+        disapear 12.5s forwards;
+}
+.hero-desc {
+    opacity: 0;
+    animation: typewriter 3s steps(25) 3.5s forwards alternate,
+        typewriter-backwards 4s 5s steps(20) forwards alternate,
+        blink 5s steps(20) 4s forwards normal,
+        appear 200ms 3.5s forwards,
+        disapear 11s 4s forwards;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes typewriter-backwards {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: rgb(255, 255, 255);
+    }
+
+    to {
+        border-color: transparent;
+    }
+}
+
+@keyframes disapear {
+    0%{
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 
@@ -46,5 +100,10 @@
     }
     .hero-desc{
         font-size: 1.5rem;
+    }
+
+    .hero-title,
+    .hero-desc{
+        max-width: 90vw;
     }
 }
