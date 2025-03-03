@@ -26,7 +26,7 @@
 }
 
 .blurred-content {
-    animation: fadeIn 14s ease-out forwards;
+    animation: fadeIn 10s ease-out forwards;
 }
 
 @keyframes fadeIn {
