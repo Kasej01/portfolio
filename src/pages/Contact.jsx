@@ -9,18 +9,18 @@ export default function Contact(){
             
             <form id="contact-form" action="https://formspree.io/f/mdknogen" method="POST">
                 <div className="input-container">
-                    <input type="text" id="name" name="name" required />
-                    <label htmlFor="name">Name</label>
+                    <label className="label" htmlFor="name">Name</label>
+                    <input className="input" type="text" id="name" name="name" required />
                     <div className="bar"></div>
                 </div>
                 <div className="input-container">
-                    <input type="email" id="email" name="email" required />
-                    <label htmlFor="email">Email</label>
+                    <label className="label" htmlFor="email">Email</label>
+                    <input className="input" type="email" id="email" name="email" required />
                     <div className="bar"></div>
                 </div>
                 <div className="input-container">
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                    <label htmlFor="message">Message</label>
+                    <label className="label" htmlFor="message">Message</label>
+                    <textarea className="input" id="message" name="message" rows="4" required></textarea>
                     <div className="bar"></div>
                 </div>
                 <button type="submit" className="submit-button">Send</button>
