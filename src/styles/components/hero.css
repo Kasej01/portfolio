@@ -11,6 +11,7 @@
     font-family: "Silkscreen", serif;
     font-weight: 400;
     font-style: normal;
+    animation: disapear 10s forwards;
 }
 
 .hero-title,
@@ -81,6 +82,7 @@
     }
     100%{
         opacity: 0;
+        display: none;
     }
 }
 
