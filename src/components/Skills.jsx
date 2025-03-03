@@ -4,13 +4,12 @@ import '../styles/components/skills.css';
 
 export default function Skills () {
     
-    const [repos, setRepos] = useState([]); // Store all repo data in one state
+    const [repos, setRepos] = useState([]);
 
     useEffect(() => {
         async function fetchData(){
             const data = await fetchAllRepositories();
             
-            // Fetch language data for each repo
             const updatedRepos = await Promise.all(data.map(async (repo) => {
                 const response = await fetch(repo.languages_url);
                 const languagesData = await response.json();
@@ -21,13 +20,12 @@ export default function Skills () {
                 };
             }));
 
-            setRepos(updatedRepos); // Update state with fetched repo data
+            setRepos(updatedRepos);
         }
         
         fetchData();
     }, []);
 
-    // Compute distinct languages after repos are populated
     const distinctLanguages = [...new Set(repos.flatMap(repo => repo.languages))];
 
     return (
