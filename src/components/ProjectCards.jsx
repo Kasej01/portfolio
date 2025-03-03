@@ -54,7 +54,7 @@ export default function ProjectCards({count, header, button}) {
   }
   let content="";
 
-  if(button=="false"){
+  if(button==="false"){
     content="";
   }
   else{
