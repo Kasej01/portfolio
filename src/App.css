@@ -17,14 +17,14 @@
 }
 
 .profile{
-    width: 25%;
-    margin-right: 5%;
+    width: 20%;
+    margin-right: 2.5%;
     margin-left: 2.5%;
 }
 .right{
-    width: 60%;
-    margin-left: 5%;
+    width: 70%;
+    margin-left: 2.5;
     margin-right: 2.5%;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(59, 59, 59);
     border-radius: 2rem;
 }
