@@ -19,7 +19,39 @@ function AboutMe() {
                 <br/>
             </p>
 
-            <h2 className="subtitle">What I do</h2>
+            <div className="what-i-do">
+                <h2 className="subtitle">What I do</h2>
+                <div className="skills">
+                    <div className="section">
+                        <img className="image" src="/SQL_logo.png" alt="SQL logo" />
+                        <div className="subsection">
+                            <h3 className="skill">Database Management</h3>
+                            <p className="desc">Experience in large scale database management and SQL.</p>
+                        </div>
+                    </div>
+                    <div className="section">
+                        <img className="image" src="/WebDev_logo.png" alt="Web Development logo" />
+                        <div className="subsection">
+                            <h3 className="skill">Web Development</h3>
+                            <p className="desc">Knowledge and experience in major web development languages and frameworks.</p>
+                        </div>
+                    </div>
+                    <div className="section">
+                        <img className="image" src="/ObjectOrientedProgramming_logo.png" alt="Object Oriented Programming logo" />
+                        <div className="subsection">
+                            <h3 className="skill">O-O-P</h3>
+                            <p className="desc">Experience in C#/.NET and Java - Object Oriented Programming</p>
+                        </div>
+                    </div>
+                    <div className="section">
+                        <img className="image" src="/AI_logo.png" alt="AI & Machine Learning logo" />
+                        <div className="subsection">
+                            <h3 className="skill">AI & ML</h3>
+                            <p className="desc">Masters degree focused in AI & Machine Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

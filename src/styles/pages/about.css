@@ -1,0 +1,40 @@
+.about-container{
+    padding: 0 10% 10% 10%;
+}
+
+
+.what-i-do{
+    .skills{
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .section{
+        background-color: rgb(46, 46, 46);
+        padding: 1rem;
+        border-radius: 1.5rem;
+        display: flex;
+        justify-content: center;
+        width: 40%;
+        margin: 2.5%;
+        img{
+            width: 3.25rem;
+        }
+        .subsection{
+            margin: auto;
+            margin-left: 1rem;
+            .skill{
+                font-size: 1.4rem; 
+                color: white;
+                margin: 0;
+            }
+
+            .desc{
+                color: rgb(207, 207, 207);
+                font-size: 1rem;
+                margin: 0;
+            }
+        }
+    }
+}
