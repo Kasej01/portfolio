@@ -37,6 +37,15 @@ function Navbar (){
                     </div>
                 </div>
 
+                <div className="links">
+                    <div className="text-area">
+                        <p className="title">Links</p>
+                        <a href="">GitHub</a>
+                        <br/>
+                        <a href="">LinkedIn</a>
+                    </div>
+                </div>
+
             </div>
 
         </div>

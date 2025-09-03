@@ -33,10 +33,24 @@
     margin: auto;
 
     div{
+        margin: 2rem 0;
+        p{
+            margin: 0.5rem 0;
 
+        }
         .title{
-                color: rgb(167, 167, 167);
-    }
+            color: rgb(167, 167, 167);
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s, color 0.2s;
+            display: inline-block;
+        }
+        a:hover{
+            transform: scale(1.1);
+            color: rgb(242, 255, 61);
+        }
     }
 
     .svg-icon {
