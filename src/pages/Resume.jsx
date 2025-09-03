@@ -4,7 +4,7 @@ import "../styles/components/global_component.css";
 function Resume() {
     return (
         <div className="resume-container component">
-            Hello this is my resume section
+            <h1 className="title">Resume</h1>
         </div>
     );
 }

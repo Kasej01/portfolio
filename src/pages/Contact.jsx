@@ -4,7 +4,7 @@ import "../styles/components/global_component.css";
 function Contact() {
     return (
         <div className="contact-container component">
-            Hello this is my contact section
+            <h1 className="title">Contact Me</h1>
         </div>
     );
 }
