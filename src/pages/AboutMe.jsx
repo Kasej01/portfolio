@@ -1,11 +1,10 @@
 import React from "react";
+import "../styles/components/global_component.css";
 import "../styles/pages/about.css";
 
-
-function AboutMe({component: Component}) {
+function AboutMe() {
     return (
-        <div className="about-container">
-            <Component className="navbar"/>
+        <div className="about-container component">
             Hello this is my about me section
         </div>
     );

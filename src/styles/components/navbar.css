@@ -15,16 +15,20 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 0;
     li{
         padding: 1rem;
     }
 
     /* Hover styles for navbar items */
-    a:hover{
+    button:hover{
         color: rgb(242, 255, 61);
+        cursor: pointer;
     }
-    a{
+    button{
         color: white;
+        background-color: rgb(124, 124, 124);
+        border: none;
         text-decoration: none;
     }
 }

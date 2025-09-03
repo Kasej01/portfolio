@@ -16,7 +16,7 @@ function Navbar (){
             <div className="profile-info">
 
                 <div className="email">
-                    <img src="/email-icon.svg" alt="Email Icon" className="svg-icon" />
+                    {/* <img src="/email-icon.svg" alt="Email Icon" className="svg-icon" /> */}
                     <div className="text-area">
                         <p className="title">Email</p>
                         <p>kasejohnson01@gmail.com</p>
