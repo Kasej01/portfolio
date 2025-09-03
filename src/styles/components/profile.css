@@ -1,0 +1,46 @@
+.profile-container{
+    background-color: rgb(88, 88, 88);
+    border-radius: 2rem;
+    padding: 1rem;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.photo-container{
+    background-color: rgb(44, 44, 44);
+    border-radius: 2rem;
+    width: 20vh;
+    margin: auto;
+    height: 20vh;
+}
+#profile-photo{
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.occupation{
+    background-color: rgb(44, 44, 44);
+    padding: 5px;
+    width: 50%;
+    margin: auto;
+}
+
+.profile-info{
+    text-align: left;
+    width: 50%;
+    margin: auto;
+
+    div{
+
+        .title{
+                color: rgb(167, 167, 167);
+    }
+    }
+
+    .svg-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}

@@ -1,185 +1,30 @@
 /******************
 *   Main Navbar   *
 ******************/
-:root{
-    --navbar-height: 8vh;
-}
-
 .navbar{
-    color: white;
-    width: auto;
-    height: var(--navbar-height);
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 0.1fr 1fr 0.5fr 1fr 0.05fr;
-    grid-template-areas:
-    ". navtitle . navlist.";
-    align-items: center;
-    box-shadow: 0 1rem 1rem -1rem rgba(218, 120, 248, 0.5), inset 0rem -1rem 1rem -1rem rgba(218, 120, 248, 0.5);
-    background-color: black;
-    position: relative;
-    z-index: 10;
-    font-family: "Silkscreen", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.nav-name{
-    grid-area: navtitle;
-}
-
-.nav-name a{
-    text-decoration: none;
-    color: rgba(173, 76, 202, 0.75);
-    margin-bottom: 1rem;
+    background-color: rgb(124, 124, 124);
+    width: 50%;
+    margin-left: auto;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
 }
 
 
-.nav-list{
+ul{
+    list-style: none;
     display: flex;
     flex-direction: row;
-    right: 0;
-    padding: 0vh 3vw;
     justify-content: space-around;
-    grid-area: navlist;
-}
-
-.nav-list-item a{
-    text-decoration: none;
-    color: white;
-}
-
-.nav-list-item{
-    list-style: none;
-}
-
-.nav-list-item:after {
-    display:block;
-    content: '';
-    border-bottom: solid 2px rgba(218, 120, 248, 0.25);
-    transform: scaleX(0);  
-    transition: transform 200ms ease-in-out;
-}
-
-.nav-list-item:hover:after {
-    transform: scaleX(1);
-}
-
-.nav-list-item:hover{
-    animation: scaleonefive 300ms ease-in-out forwards;
-    transform: scale(1);
-}
-.hamburger{
-    grid-area: hamburger;
-    display: none;
-}
-
-
-/********************
-*   Resume Button   *
-********************/
-.resume-list-item{
-    list-style: none;
-}
-.resume-btn{
-    color: purple;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 0.5rem;
-    border: 2px solid rgb(212, 167, 212);
-    padding: 0.5rem;
-}
-
-.resume-btn:hover{
-    background: linear-gradient(90deg, rgb(255, 108, 255), rgb(155, 0, 155), rgb(255, 198, 255));
-    background-size: 400% 400%;
-    animation: none;
-	animation: gradient 2s ease infinite;
-    color: black;
-}
-
-/********************
-*   Media Queries   *
-********************/
-
-@media screen and (max-width: 900px){
-    .navbar{
-        grid-template-columns: 0.1fr 1fr 0.15fr 1.5fr 0.1fr 0.1fr;
-        grid-template-areas:
-        ". navtitle . navlist resume .";
+    li{
+        padding: 1rem;
     }
 
-    .nav-list-item a{
-        padding: 1.5vw;
+    /* Hover styles for navbar items */
+    a:hover{
+        color: rgb(242, 255, 61);
     }
-}
-
-@media screen and (max-width: 700px){
-    .nav-name{
-        font-size: 1.5rem;
+    a{
+        color: white;
+        text-decoration: none;
     }
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: black;
-        border-bottom: solid 2px rgba(218, 120, 248, 0.25);
-        border-left: solid 2px rgba(218, 120, 248, 0.25);
-        width: 200px;
-        text-align: right;
-        padding: 10px;
-    }
-
-    .navbar{
-        grid-template-columns: 0.1fr 1fr 0.15fr 0.15fr 0.1fr;
-        height: 7vh;
-        grid-template-areas: ". navtitle . hamburger .";
-    }
-
-    .nav-list.open {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nav-list-item{
-        margin: 1rem;
-    }
-
-    .hamburger{
-        display:block;
-    }
-
-    .nav-list-item:hover{
-        animation: none;
-    }
-}
-
-
-/****************
-*   Keyframes   *
-****************/
-@keyframes scaleonefive {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.5);
-    }
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-        transform: scale(1);
-	}
-	50% {
-		background-position: 100% 50%;
-        transform: scale(1);
-	}
-	100% {
-		background-position: 0% 50%;
-        transform: scale(1);
-	}
 }
