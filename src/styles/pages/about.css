@@ -15,6 +15,7 @@
         margin: 2.5%;
         img{
             width: 3.25rem;
+            margin: auto;
         }
         .subsection{
             margin: auto;
@@ -32,4 +33,32 @@
             }
         }
     }
+}
+
+@media (max-width: 1200px){
+    .what-i-do{
+        .skills{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100% !important;
+        }
+        .section{
+            width: 40%;
+            margin: 1% 1%;
+
+            img{
+                width: 2.5rem;
+                height: 4rem;
+            }
+            .subsection{
+                .skill{
+                    font-size: 1.25rem;
+                }
+                p{
+                    font-size: 0.75rem;
+                }
+            }
+        }
+}
 }

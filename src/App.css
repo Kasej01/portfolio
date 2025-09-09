@@ -6,7 +6,7 @@
 *    Main section     *
 **********************/
 .app-container{
-    width: 90vw;
+    width: 100%;
     color: white;
     border-radius: 2rem;
     padding-top: 0;
@@ -23,8 +23,20 @@
 }
 .right{
     width: 70%;
-    margin-left: 2.5;
+    margin-left: 2.5%;
     margin-right: 2.5%;
     background-color: rgb(59, 59, 59);
     border-radius: 2rem;
+}
+
+@media (max-width: 1200px){
+    .app{
+        padding: 2vh 2vw;
+    }
+    .profile{
+        width: 25%;
+    }
+    .right{
+        width: 65%;
+    }
 }

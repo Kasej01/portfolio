@@ -39,3 +39,9 @@
         background: #888;
     }
 }
+
+@media (max-width: 1200px){
+    .component{
+        padding: 0 5% 5% 5%;
+    }
+}

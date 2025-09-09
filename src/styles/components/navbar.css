@@ -32,3 +32,12 @@ ul{
         text-decoration: none;
     }
 }
+
+@media (max-width: 1200px){
+    .navbar{
+        width: 75%;
+        button{
+            font-size: 0.9rem;
+        }
+    }
+}

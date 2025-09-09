@@ -14,7 +14,6 @@ function Navbar (){
 
 
             <div className="profile-info">
-
                 <div className="email">
                     <div className="text-area">
                         <p className="title">Email</p>
