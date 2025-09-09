@@ -63,10 +63,38 @@
 }
 
 
-@media (max-width: 1200px){
+@media (min-width: 901px) and (max-width: 1200px){
     .text-area{
         p{
             font-size: 0.8rem;
+        }
+    }
+}
+
+@media (min-width: 650px) and (max-width: 900px){
+    .text-area{
+        p{
+            font-size: 0.8rem;
+        }
+    }
+    .profile-container{
+    padding: 0.5rem;
+    width: 100%;
+    }
+
+    .photo-container{
+        width: 80%;
+        height: 80%;
+    }
+
+    .occupation{
+        width: 80%;
+    }
+
+    .profile-info{
+        width: 100%;
+        div{
+            margin: 0.35rem 0;
         }
     }
 }

@@ -40,8 +40,15 @@
     }
 }
 
-@media (max-width: 1200px){
+@media (min-width: 901px) and (max-width: 1200px){
     .component{
         padding: 0 5% 5% 5%;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 900px){
+    .component{
+        padding: 0 3% 3% 3%;
+        height: 85vh;
     }
 }

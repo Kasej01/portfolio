@@ -8,7 +8,7 @@ function Navbar() {
                 <li className="nav-list-item">
                     <Link to="/about"><button>About</button></Link>
                 </li>
-                <li className="resume-list-item">
+                <li className="nav-list-item">
                     <Link to="/resume"><button className="resume-btn">Resume</button></Link>
                 </li>
                 <li className="nav-list-item">

@@ -34,14 +34,14 @@
         }
     }
 }
-
-@media (max-width: 1200px){
+/* Medium to Large Screens */
+@media (min-width: 901px) and (max-width: 1200px){
     .what-i-do{
         .skills{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            width: 100% !important;
+            width: 100%;
         }
         .section{
             width: 40%;
@@ -55,10 +55,47 @@
                 .skill{
                     font-size: 1.25rem;
                 }
-                p{
+                .desc{
                     font-size: 0.75rem;
                 }
             }
         }
 }
+}
+
+/* Small-Medium Screens */
+@media (min-width: 650px) and (max-width: 901px){
+    .what-i-do{
+        .skills{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .section{
+            width: 38%;
+            margin: 1% 1%;
+
+            img{
+                width: 2rem;
+                height: 3rem;
+            }
+            .subsection{
+                .skill{
+                    font-size: 1rem;
+                }
+                .desc{
+                    font-size: 0.65rem;
+                }
+            }
+        }
+}
+    .about-container{
+        .title{
+            font-size: 2rem;
+        }
+        .description{
+            font-size: 0.9rem;
+        }
+    }
 }

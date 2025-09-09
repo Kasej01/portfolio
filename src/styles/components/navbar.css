@@ -33,11 +33,25 @@ ul{
     }
 }
 
-@media (max-width: 1200px){
+@media (min-width: 901px) and (max-width: 1200px){
     .navbar{
         width: 75%;
         button{
             font-size: 0.9rem;
+        }
+    }
+}
+
+@media (min-width: 650px) and (max-width: 900px){
+    .navbar{
+        width: 90%;
+        button{
+            font-size: 0.75rem;
+        }
+    }
+    ul{
+        li{
+            padding: 0.5rem;
         }
     }
 }
