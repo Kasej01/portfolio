@@ -42,16 +42,16 @@ ul{
     }
 }
 
-@media (min-width: 650px) and (max-width: 900px){
+@media (max-width: 900px){
     .navbar{
         width: 90%;
         button{
-            font-size: 0.75rem;
+            font-size: 0.6rem;
         }
     }
     ul{
         li{
-            padding: 0.5rem;
+            padding: .1rem 0;
         }
     }
 }

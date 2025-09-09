@@ -40,3 +40,21 @@
         width: 65%;
     }
 }
+
+@media (max-width: 650px){
+    .app{
+        padding: 1vh 2.5vw;
+    }
+    .app-container{
+        width: 95vw;
+        flex-direction: column;
+    }
+    .right{
+        width: 100%;
+        margin: 0;
+    }
+    .profile{
+        width: 100%;
+        margin: 0;
+    }
+}

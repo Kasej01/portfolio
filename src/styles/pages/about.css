@@ -99,3 +99,37 @@
         }
     }
 }
+
+/* Small Screens */
+@media (max-width: 650px){
+    .what-i-do{
+        .subtitle{
+            font-size: 1.25rem;
+        }
+        .skills{
+            flex-direction: column;
+        }
+        .section{
+            width: 80%;
+            margin: auto;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            .subsection{
+                .skill{
+                    font-size: 1rem;
+                }
+                .desc{
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+    .about-container{
+        .title{
+            font-size: 1.5rem;
+        }
+        .description{
+            font-size: 0.75rem;
+        }
+    }
+}
